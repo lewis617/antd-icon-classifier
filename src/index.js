@@ -1,8 +1,9 @@
-import * as tf from '@tensorflow/tfjs';
+import * as tfconv from '@tensorflow/tfjs-converter';
+import * as tf from '@tensorflow/tfjs-core';
 
 import ICON_CLASSES from './icon_classes';
 
-const MODEL_PATH = '//web-models.oss-cn-hangzhou.aliyuncs.com/antd-icon/model.json';
+const MODEL_PATH = 'https://cdn.jsdelivr.net/gh/lewis617/antd-icon-classifier/model/model.json';
 
 const IMAGE_SIZE = 224;
 
@@ -18,9 +19,14 @@ function findIndicesOfMax(inp, count) {
   return outp;
 }
 
+let model;
+
 const load = async () => {
-  const model = await tf.loadGraphModel(MODEL_PATH);
-  const imgEl = document.getElementById('img');
+  model = await tfconv.loadGraphModel(MODEL_PATH);
+};
+
+const predict = async (imgEl) => {
+  if (!imgEl || !model) { return; }
   const pred = tf.tidy(() => {
     // 从图片转为 tensor
     const img = tf.browser.fromPixels(imgEl).toFloat();
@@ -47,10 +53,10 @@ const load = async () => {
     className: ICON_CLASSES[i],
     score: predArray[i],
   }));
-  console.log(predictions);
   return predictions;
 };
 
 export default {
   load,
+  predict
 };
