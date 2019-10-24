@@ -23,6 +23,8 @@ let model;
 
 const load = async () => {
   model = await tfconv.loadGraphModel(MODEL_PATH);
+  model.predict(tf.zeros(
+    [1, IMAGE_SIZE, IMAGE_SIZE, 3]));
 };
 
 const predict = async (imgEl) => {
