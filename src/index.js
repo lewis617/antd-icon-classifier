@@ -30,7 +30,7 @@ const load = async () => {
   result.dispose();
 };
 
-const predict = async (imgEl) => {
+const predict = (imgEl) => {
   if (!imgEl || !model) { return; }
   new Image().src = '//gm.mmstat.com/xtracker.1.1?gmkey=OTHER&cna=71kGFSaixjsCASp4SmFO+kSL&spm-cnt=0.0.0.0.1a035a26Tlwg9f&logtype=2&gokey=' + encodeURIComponent(`v=1.2.4&ts=${new Date().getTime()}&tid=XT-00213&dl=${window.location.origin}&t=event&ec=data_icon`);
   const pred = tf.tidy(() => {
