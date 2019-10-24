@@ -3,7 +3,7 @@ import * as tf from '@tensorflow/tfjs-core';
 
 import ICON_CLASSES from './icon_classes';
 
-const MODEL_PATH = 'https://cdn.jsdelivr.net/gh/lewis617/antd-icon-classifier/model/model.json';
+const MODEL_PATH = 'https://cdn.jsdelivr.net/gh/lewis617/antd-icon-classifier@0.0.1/model/model.json';
 
 const IMAGE_SIZE = 224;
 
