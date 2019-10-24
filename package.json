@@ -1,0 +1,51 @@
+{
+  "name": "@ali/antd-icon-classifier",
+  "main": "dist/main.js",
+  "description": "cr js sdk",
+  "version": "0.0.1",
+  "keywords": [
+    "ccofe",
+    "react",
+    "antd-icon-classifier"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.alibaba-inc.com:ccofe/antd-icon-classifier.git"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npm.alibaba-inc.com"
+  },
+  "files": [
+    "lib",
+    "src",
+    "build",
+    "demo"
+  ],
+  "scripts": {
+    "start": "webpack-dev-server --open-page demo --mode development",
+    "build": "webpack --mode production"
+  },
+  "readmeFilename": "README.md",
+  "tnpm": {
+    "mode": "npminstall"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@ali/root-loader": "^0.0.6",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.4.5",
+    "babel-loader": "^8.0.6",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^1.2.7"
+  }
+}
