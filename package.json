@@ -4,17 +4,9 @@
   "description": "cr js sdk",
   "version": "0.0.1",
   "keywords": [
-    "ccofe",
     "react",
     "antd-icon-classifier"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git@gitlab.alibaba-inc.com:ccofe/antd-icon-classifier.git"
-  },
-  "publishConfig": {
-    "registry": "http://registry.npm.alibaba-inc.com"
-  },
   "files": [
     "lib",
     "src",
@@ -31,7 +23,6 @@
   },
   "peerDependencies": {},
   "devDependencies": {
-    "@ali/root-loader": "^0.0.6",
     "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/plugin-transform-runtime": "^7.4.4",
