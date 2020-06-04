@@ -37,6 +37,6 @@
     "webpack-dev-server": "^3.1.5"
   },
   "dependencies": {
-    "@tensorflow/tfjs": "^1.2.7"
+    "@tensorflow/tfjs": "1.2.7"
   }
 }
